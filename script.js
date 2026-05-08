@@ -477,12 +477,22 @@ function openModal(id) {
   document.getElementById('modalTitle').textContent = `${m.title} (${m.year}) ${m.type} [${m.lang}] ${m.quality}`;
   document.getElementById('modalBody').innerHTML = `
     <div class="movie-details-grid">
-      <div class="detail-poster">
-        <div style="width:100%;aspect-ratio:2/3;background:linear-gradient(135deg,${m.colors[0]},${m.colors[1]});display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <div style="font-size:56px;">${genreIcon(m.genre)}</div>
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;text-align:center;padding:8px;letter-spacing:1px;color:#fff">${m.title}</div>
-        </div>
-      </div>
+     <div class="detail-poster">
+
+  <img 
+    src="${m.poster}" 
+    alt="${m.title}"
+
+    style="
+      width:100%;
+      aspect-ratio:2/3;
+      object-fit:cover;
+      border-radius:10px;
+      display:block;
+    "
+  >
+
+</div>
       <div class="detail-info">
         <table>
           <tr><td>Rating</td><td>⭐ ${m.rating}/10</td></tr>
