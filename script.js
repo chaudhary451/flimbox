@@ -393,25 +393,84 @@ function filterCategory(cat) {
 }
 
 function handleSearch() {
-  const q = document.getElementById('searchInput').value.toLowerCase();
+
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+
   currentPage = 1;
+
+  // Empty search
   if (!q) {
     renderMovies(movies, 'movieGrid');
     renderPagination(TOTAL_PAGES, 1);
     return;
   }
+
+  // Filter movies
   const filtered = movies.filter(m =>
+
     m.title.toLowerCase().includes(q) ||
     m.genre.toLowerCase().includes(q) ||
     m.lang.toLowerCase().includes(q)
-  );
-  renderMovies(filtered.length ? filtered : movies, 'movieGrid');
-  renderPagination(Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE)), 1);
-}
 
-document.getElementById('searchInput').addEventListener('keyup', e => {
-  if (e.key === 'Enter') handleSearch();
-});
+  );
+
+  // If movie found
+  if (filtered.length > 0) {
+
+    renderMovies(filtered, 'movieGrid');
+
+    renderPagination(
+      Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE)),
+      1
+    );
+
+  }
+
+  // If not found
+  else {
+
+    const grid = document.getElementById('movieGrid');
+
+    grid.innerHTML = `
+
+      <div style="
+        width:100%;
+        grid-column:1/-1;
+        text-align:center;
+        padding:60px 20px;
+        color:#aaa;
+      ">
+
+        <div style="
+          font-size:70px;
+          margin-bottom:20px;
+        ">
+          😔
+        </div>
+
+        <div style="
+          font-size:28px;
+          font-family:'Bebas Neue',sans-serif;
+          letter-spacing:2px;
+          color:#fff;
+        ">
+          MOVIE NOT AVAILABLE
+        </div>
+
+        <div style="
+          margin-top:10px;
+          font-size:14px;
+          color:#777;
+        ">
+          "${q}" is currently unavailable.
+        </div>
+
+      </div>
+    `;
+
+    document.getElementById('pagination').innerHTML = '';
+  }
+}
 
 // ─── MODAL ───────────────────────────────────────────────────────────────────
 function openModal(id) {
