@@ -483,17 +483,21 @@ function goSlide(n) {
 setInterval(() => goSlide((currentSlide + 1) % slides.length), 5000);
 
 // ─── POSTER STRIP ────────────────────────────────────────────────────────────
-const stripColors = ['#1a0040','#001a2a','#1a1a00','#1a0000','#001a00','#0a001a','#1a0a00','#000d1a','#1a001a','#001a1a'];
-const stripIcons = ['🎬','⚔️','😂','😱','🔍','💕','🚀','🎭','🌟','📺'];
+
 const strip = document.getElementById('posterStrip');
+
 const allItems = [...Array(20)].map((_, i) => `
   <div class="strip-item">
-    <div style="width:80px;height:110px;background:linear-gradient(135deg,${stripColors[i%10]},#000);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
-      <div style="font-size:28px">${stripIcons[i%10]}</div>
-      <div style="font-size:9px;color:rgba(255,255,255,0.5);font-family:'Rajdhani',sans-serif;text-align:center;padding:2px">${movies[i%movies.length].title.substring(0,12)}</div>
-    </div>
+
+    <img 
+      src="${movies[i % movies.length].poster}" 
+      alt="${movies[i % movies.length].title}"
+      style="width:100%;height:100%;object-fit:cover;"
+    >
+
   </div>
 `).join('');
+
 strip.innerHTML = allItems + allItems; // duplicate for seamless loop
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
