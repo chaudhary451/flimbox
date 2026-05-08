@@ -198,12 +198,17 @@
   .hero-slide.active { opacity: 1; }
 
   .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center top;
-    filter: brightness(0.4);
-  }
+  position: absolute;
+  inset: 0;
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  filter: brightness(0.4);
+}
 
   .hero-content {
     position: relative;
