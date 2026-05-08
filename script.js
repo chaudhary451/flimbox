@@ -283,26 +283,50 @@ function genreIcon(g) {
 function renderMovies(list, gridId) {
   const grid = document.getElementById(gridId);
   if (!grid) return;
+
   grid.innerHTML = list.map(m => `
     <div class="movie-card" onclick="openModal('${m.id}')">
+
       <div class="movie-poster">
-        <div style="width:100%;height:100%;background:linear-gradient(135deg,${m.colors[0]},${m.colors[1]});display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;">
-          <div style="font-size:42px;">${genreIcon(m.genre)}</div>
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;text-align:center;letter-spacing:1px;line-height:1.2;color:#fff;text-shadow:1px 1px 4px #000">${m.title}</div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.6);font-family:'Rajdhani',sans-serif">${m.year}</div>
+
+        <img 
+          src="${m.poster}" 
+          alt="${m.title}" 
+          style="width:100%;height:100%;object-fit:cover;"
+        >
+
+        <div class="movie-overlay">
+          <div class="play-btn">⬇</div>
         </div>
-        <div class="movie-overlay"><div class="play-btn">⬇</div></div>
-        ${m.badge ? `<div class="quality-badge ${m.badge === 'CAM' ? 'cam' : m.badge === '4K' || m.badge === 'HD' ? 'hd' : ''}">${m.badge}</div>` : ''}
-        ${m.source ? `<div class="new-badge" style="background:${m.badgeColor || '#00c853'}">${m.type}</div>` : ''}
+
+        ${m.badge ? `
+          <div class="quality-badge ${m.badge === 'CAM' ? 'cam' : m.badge === '4K' || m.badge === 'HD' ? 'hd' : ''}">
+            ${m.badge}
+          </div>
+        ` : ''}
+
+        ${m.source ? `
+          <div class="new-badge" style="background:${m.badgeColor || '#00c853'}">
+            ${m.type}
+          </div>
+        ` : ''}
+
       </div>
+
       <div class="movie-info">
-        <div class="movie-title">${m.title} (${m.year})</div>
+
+        <div class="movie-title">
+          ${m.title} (${m.year})
+        </div>
+
         <div class="movie-meta">
           <span class="lang">${m.lang.split(' ')[0]}</span>
           <span>${m.quality.split(' ')[0]}</span>
           <span>⭐${m.rating}</span>
         </div>
+
       </div>
+
     </div>
   `).join('');
 }
