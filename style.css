@@ -937,11 +937,11 @@
   .top-bar a{
     font-size:12px;
   }
-/* MOBILE FOOTER FIX */
+  /* PERFECT MOBILE FOOTER FIX */
 
 @media (max-width:600px){
 
-  footer .footer-content{
+  footer .container{
 
     display:grid !important;
 
@@ -951,26 +951,38 @@
 
   }
 
+  footer .container > div{
+
+    width:100% !important;
+
+    min-width:0 !important;
+  }
+
   footer{
 
     padding:30px 15px !important;
-
   }
 
   footer h3{
 
-    font-size:24px !important;
+    font-size:22px !important;
 
+    margin-bottom:14px !important;
   }
 
-  footer a,
   footer p,
+  footer a,
   footer li{
 
     font-size:13px !important;
 
     line-height:1.7 !important;
+
+    word-break:break-word;
   }
+
+}
+
 
 }
 
