@@ -1,13 +1,22 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
 const movies = [
   {
-    id: 'lukkhe', title: 'Lukkhe (Season 1)', year: 2026,
-    type: 'WEB-DL', quality: '4K 1080p 720p 480p',
-    lang: 'Hindi DD5.1', genre: 'Drama', category: 'webseries',
-    source: 'Amazon Prime Video', rating: '8.5',
+    id: 'lukkhe',
+    title: 'Lukkhe (Season 1)',
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/lukkhe.webp',
+    year: 2026,
+    type: 'WEB-DL',
+    quality: '4K 1080p 720p 480p',
+    lang: 'Hindi DD5.1',
+    genre: 'Drama',
+    category: 'webseries',
+    source: 'Amazon Prime Video',
+    rating: '8.5',
     desc: 'A gripping drama series from Amazon Prime Video following a young man caught between ambition and loyalty in the streets of Kolkata.',
     colors: ['#1a0040','#0d0020'],
-    badge: 'NEW', badgeColor: '#00c853',
+    badge: 'NEW',
+    badgeColor: '#00c853',
+
     sizes: [
       { q:'480p', codec:'x264', size:'1.1GB', class:'q-480' },
       { q:'720p', codec:'x264', size:'2.7GB', class:'q-720' },
@@ -16,56 +25,104 @@ const movies = [
       { q:'4K/2160p SDR WEB-DL PACK', codec:'', size:'32.6GB', class:'q-4k' },
     ]
   },
+
   {
-    id: 'fantasy', title: 'Fantasy Life', year: 2026,
-    type: 'WEB-DL', quality: '1080p 720p 480p',
-    lang: 'Hindi DD2.0 & English', genre: 'Comedy', category: 'hollywood',
-    source: 'OTT', rating: '7.8',
+    id: 'fantasy',
+    title: 'Fantasy Life',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/fantacylife.webp',
+
+    year: 2026,
+    type: 'WEB-DL',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi DD2.0 & English',
+    genre: 'Comedy',
+    category: 'hollywood',
+    source: 'OTT',
+    rating: '7.8',
     desc: 'A quirky comedy about modern life, unconventional relationships and the pursuit of happiness through unexpected means.',
     colors: ['#1a2000','#0d2000'],
-    badge: '4K', badgeColor: '#f5c518',
+    badge: '4K',
+    badgeColor: '#f5c518',
+
     sizes: [
       { q:'480p', codec:'x264', size:'750MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'1.5GB', class:'q-720' },
       { q:'1080p 10Bit', codec:'HEVC', size:'3.4GB', class:'q-1080' },
     ]
   },
+
   {
-    id: 'lake', title: 'Lake George', year: 2024,
-    type: 'WEB-DL', quality: '1080p 720p 480p',
-    lang: 'Hindi DD5.1 & English', genre: 'Thriller', category: 'hollywood',
-    source: 'OTT', rating: '6.9',
+    id: 'lake',
+    title: 'Lake George',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/lake%20geroge.webp',
+
+    year: 2024,
+    type: 'WEB-DL',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi DD5.1 & English',
+    genre: 'Thriller',
+    category: 'hollywood',
+    source: 'OTT',
+    rating: '6.9',
     desc: 'A tense thriller set against a lakeside backdrop where secrets unravel and danger lurks beneath the surface.',
     colors: ['#001a2a','#000d1a'],
-    badge: 'HD', badgeColor: '',
+    badge: 'HD',
+    badgeColor: '',
+
     sizes: [
       { q:'480p', codec:'x264', size:'600MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'1.2GB', class:'q-720' },
       { q:'1080p 10Bit', codec:'HEVC', size:'2.8GB', class:'q-1080' },
     ]
   },
+
   {
-    id: 'mk2', title: 'Mortal Kombat II', year: 2026,
-    type: 'HQ-HDTC', quality: '1080p 720p 480p',
-    lang: 'Hindi-English-Tamil-Telugu', genre: 'Action', category: 'hollywood',
-    source: 'Theatre Rip', rating: '7.2',
+    id: 'mk2',
+    title: 'Mortal Kombat II',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/mortal%20combate.webp',
+
+    year: 2026,
+    type: 'HQ-HDTC',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi-English-Tamil-Telugu',
+    genre: 'Action',
+    category: 'hollywood',
+    source: 'Theatre Rip',
+    rating: '7.2',
     desc: 'The warriors of Earthrealm return for another brutal tournament. Blood will spill. Fatalities await.',
     colors: ['#2a0000','#1a0000'],
-    badge: 'CAM', badgeColor: '#555',
+    badge: 'CAM',
+    badgeColor: '#555',
+
     sizes: [
       { q:'480p', codec:'x264', size:'900MB', class:'q-480' },
       { q:'720p', codec:'x264/HEVC', size:'2.1GB', class:'q-720' },
       { q:'1080p', codec:'HEVC', size:'4.5GB', class:'q-1080' },
     ]
   },
+
   {
-    id: 'single', title: 'No Place to Be Single', year: 2026,
-    type: 'WEB-DL', quality: '4K 1080p 720p 480p',
-    lang: 'Hindi DD5.1 & English', genre: 'Romance', category: 'hollywood',
-    source: 'OTT', rating: '7.4',
+    id: 'single',
+    title: 'No Place to Be Single',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/no%20place%20to%20bi%20single.webp',
+
+    year: 2026,
+    type: 'WEB-DL',
+    quality: '4K 1080p 720p 480p',
+    lang: 'Hindi DD5.1 & English',
+    genre: 'Romance',
+    category: 'hollywood',
+    source: 'OTT',
+    rating: '7.4',
     desc: 'A heartfelt romantic comedy about finding love in the most unexpected place — somewhere in the Tuscan countryside.',
     colors: ['#1a1000','#0d0800'],
-    badge: '4K', badgeColor: '#f5c518',
+    badge: '4K',
+    badgeColor: '#f5c518',
+
     sizes: [
       { q:'480p', codec:'x264', size:'700MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'1.4GB', class:'q-720' },
@@ -73,14 +130,26 @@ const movies = [
       { q:'4K/2160p SDR WEB-DL', codec:'', size:'15.2GB', class:'q-4k' },
     ]
   },
+
   {
-    id: 'amaran', title: 'Amaran', year: 2024,
-    type: 'WEB-DL', quality: '4K 1080p 720p 480p',
-    lang: 'Hindi DD5.1', genre: 'Action', category: 'south',
-    source: 'OTT', rating: '8.3',
+    id: 'amaran',
+    title: 'Amaran',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/Amaran.jpg',
+
+    year: 2024,
+    type: 'WEB-DL',
+    quality: '4K 1080p 720p 480p',
+    lang: 'Hindi DD5.1',
+    genre: 'Action',
+    category: 'south',
+    source: 'OTT',
+    rating: '8.3',
     desc: 'The true story of Major Mukund Varadarajan, a decorated Indian Army officer who gave his life for the nation.',
     colors: ['#1a0a00','#0d0500'],
-    badge: 'NEW', badgeColor: '#00c853',
+    badge: 'NEW',
+    badgeColor: '#00c853',
+
     sizes: [
       { q:'480p', codec:'x264', size:'1.2GB', class:'q-480' },
       { q:'720p', codec:'x264', size:'2.5GB', class:'q-720' },
@@ -88,28 +157,52 @@ const movies = [
       { q:'4K/2160p', codec:'HEVC', size:'22GB', class:'q-4k' },
     ]
   },
+
   {
-    id: 'mohiniyattam', title: 'Mohiniyattam 2', year: 2026,
-    type: 'WEB-DL', quality: '1080p 720p 480p',
-    lang: 'Hindi & Tamil', genre: 'Drama', category: 'south',
-    source: 'OTT', rating: '7.1',
+    id: 'mohiniyattam',
+    title: 'Mohiniyattam 2',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/Mohiniataym.webp',
+
+    year: 2026,
+    type: 'WEB-DL',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi & Tamil',
+    genre: 'Drama',
+    category: 'south',
+    source: 'OTT',
+    rating: '7.1',
     desc: 'A continuation of the beloved South Indian drama exploring art, love, and sacrifice through classical dance.',
     colors: ['#001a1a','#000d0d'],
-    badge: 'HD', badgeColor: '',
+    badge: 'HD',
+    badgeColor: '',
+
     sizes: [
       { q:'480p', codec:'x264', size:'800MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'1.6GB', class:'q-720' },
       { q:'1080p', codec:'HEVC', size:'3.8GB', class:'q-1080' },
     ]
   },
+
   {
-    id: 'taskaree', title: 'Taskaree', year: 2025,
-    type: 'WEB-DL', quality: '4K 1080p 720p 480p',
-    lang: 'Hindi DD5.1', genre: 'Thriller', category: 'bollywood',
-    source: 'OTT', rating: '7.9',
+    id: 'taskaree',
+    title: 'Taskaree',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/Taskaree.webp',
+
+    year: 2025,
+    type: 'WEB-DL',
+    quality: '4K 1080p 720p 480p',
+    lang: 'Hindi DD5.1',
+    genre: 'Thriller',
+    category: 'bollywood',
+    source: 'OTT',
+    rating: '7.9',
     desc: 'A high-stakes heist thriller from Bollywood featuring master criminals, impossible odds, and one last job.',
     colors: ['#0a001a','#050010'],
-    badge: '4K', badgeColor: '#f5c518',
+    badge: '4K',
+    badgeColor: '#f5c518',
+
     sizes: [
       { q:'480p', codec:'x264', size:'950MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'2.0GB', class:'q-720' },
@@ -117,28 +210,52 @@ const movies = [
       { q:'4K/2160p SDR', codec:'HEVC', size:'18GB', class:'q-4k' },
     ]
   },
+
   {
-    id: 'caught', title: 'Caught Stealing', year: 2025,
-    type: 'WEB-DL', quality: '1080p 720p 480p',
-    lang: 'Hindi DD5.1 & English', genre: 'Action', category: 'hollywood',
-    source: 'OTT', rating: '7.3',
+    id: 'caught',
+    title: 'Caught Stealing',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/caught%20Stealing.webp',
+
+    year: 2025,
+    type: 'WEB-DL',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi DD5.1 & English',
+    genre: 'Action',
+    category: 'hollywood',
+    source: 'OTT',
+    rating: '7.3',
     desc: 'A bartender is suddenly thrust into a dangerous world of crime, corruption, and survival in New York City.',
     colors: ['#1a1a00','#0d0d00'],
-    badge: 'HD', badgeColor: '',
+    badge: 'HD',
+    badgeColor: '',
+
     sizes: [
       { q:'480p', codec:'x264', size:'750MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'1.5GB', class:'q-720' },
       { q:'1080p', codec:'HEVC', size:'3.2GB', class:'q-1080' },
     ]
   },
+
   {
-    id: '120', title: '120 Bahadur', year: 2025,
-    type: 'WEB-DL', quality: '1080p 720p 480p',
-    lang: 'Hindi DD5.1', genre: 'Action', category: 'bollywood',
-    source: 'OTT', rating: '8.0',
+    id: '120',
+    title: '120 Bahadur',
+
+    poster: 'https://raw.githubusercontent.com/chaudhary451/flimbox/main/images/120%20Bhadur.webp',
+
+    year: 2025,
+    type: 'WEB-DL',
+    quality: '1080p 720p 480p',
+    lang: 'Hindi DD5.1',
+    genre: 'Action',
+    category: 'bollywood',
+    source: 'OTT',
+    rating: '8.0',
     desc: 'The heroic tale of 120 soldiers who fought against insurmountable odds, defending the honor of their nation.',
     colors: ['#001a00','#000d00'],
-    badge: 'NEW', badgeColor: '#00c853',
+    badge: 'NEW',
+    badgeColor: '#00c853',
+
     sizes: [
       { q:'480p', codec:'x264', size:'900MB', class:'q-480' },
       { q:'720p', codec:'x264', size:'2.0GB', class:'q-720' },
