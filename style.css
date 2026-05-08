@@ -876,5 +876,45 @@
     padding: 10px 12px;
     font-size: 12px;
   }
+  /* MOBILE SEARCH ICON FIX */
+
+@media (max-width: 600px){
+
+  .search-bar{
+    display:flex;
+    align-items:center;
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+  }
+
+  .search-bar input{
+    flex:1;
+    min-width:0;
+  }
+
+  .search-bar button{
+
+    width:60px !important;
+    min-width:60px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    background:#e50914 !important;
+
+    color:white !important;
+
+    font-size:24px !important;
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+
+    border:none;
+  }
+
+
 
 }
