@@ -583,15 +583,3 @@ document.getElementById('searchInput')
 
 });
 
-document.getElementById('searchInput')
-.addEventListener('keypress', function(e){
-
-  if(e.key === 'Enter'){
-
-    handleSearch();
-
-  }
-
-});
-
-});
