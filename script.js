@@ -581,5 +581,14 @@ document.getElementById('searchInput')
     renderPagination(TOTAL_PAGES, 1);
   }
 
+document.getElementById('searchInput')
+.addEventListener('keypress', function(e){
+
+  if(e.key === 'Enter'){
+
+    handleSearch();
+
+  }
+
 });
 
