@@ -394,18 +394,22 @@ function filterCategory(cat) {
 
 function handleSearch() {
 
-  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const q = document.getElementById('searchInput')
+    .value
+    .toLowerCase()
+    .trim();
 
   currentPage = 1;
 
-  // Empty search
   if (!q) {
+
     renderMovies(movies, 'movieGrid');
+
     renderPagination(TOTAL_PAGES, 1);
+
     return;
   }
 
-  // Filter movies
   const filtered = movies.filter(m =>
 
     m.title.toLowerCase().includes(q) ||
@@ -414,7 +418,6 @@ function handleSearch() {
 
   );
 
-  // If movie found
   if (filtered.length > 0) {
 
     renderMovies(filtered, 'movieGrid');
@@ -426,19 +429,14 @@ function handleSearch() {
 
   }
 
-  // If not found
   else {
 
-    const grid = document.getElementById('movieGrid');
-
-    grid.innerHTML = `
+    document.getElementById('movieGrid').innerHTML = `
 
       <div style="
-        width:100%;
         grid-column:1/-1;
         text-align:center;
         padding:60px 20px;
-        color:#aaa;
       ">
 
         <div style="
@@ -449,20 +447,20 @@ function handleSearch() {
         </div>
 
         <div style="
-          font-size:28px;
+          color:white;
+          font-size:32px;
           font-family:'Bebas Neue',sans-serif;
           letter-spacing:2px;
-          color:#fff;
         ">
           MOVIE NOT AVAILABLE
         </div>
 
         <div style="
+          color:#888;
           margin-top:10px;
-          font-size:14px;
-          color:#777;
+          font-size:15px;
         ">
-          "${q}" is currently unavailable.
+          "${q}" is currently unavailable
         </div>
 
       </div>
@@ -563,3 +561,14 @@ strip.innerHTML = allItems + allItems; // duplicate for seamless loop
 renderMovies(movies, 'movieGrid');
 renderPagination(TOTAL_PAGES, 1);
 renderMovies(movies.filter(m => m.category === 'webseries'), 'webSeriesGrid');
+document.getElementById('searchInput')
+.addEventListener('input', function () {
+
+  if (this.value.trim() === '') {
+
+    renderMovies(movies, 'movieGrid');
+
+    renderPagination(TOTAL_PAGES, 1);
+  }
+
+});
