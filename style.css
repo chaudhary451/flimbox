@@ -852,3 +852,24 @@
     .detail-poster { display: none; }
     nav a { padding: 10px 12px; font-size: 12px; }
   }
+@media (max-width: 600px) {
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .search-bar button {
+    width: 55px;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
